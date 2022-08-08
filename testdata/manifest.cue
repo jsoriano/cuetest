@@ -31,3 +31,7 @@ spec_version: string
     ...
   }
 }
+
+#Package: {
+  "manifest.yml": #PackageManifest
+}

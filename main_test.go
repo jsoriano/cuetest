@@ -16,13 +16,13 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-//go:embed manifest.cue
+//go:embed testdata/manifest.cue
 var manifestCue string
 
-//go:embed manifest-2.0.0.yml
+//go:embed testdata/manifest-2.0.0.yml
 var manifestYml2_0_0 string
 
-//go:embed manifest-1.14.1.yml
+//go:embed testdata/manifest-1.14.1.yml
 var manifestYml1_14_1 string
 
 func TestValidation(t *testing.T) {
