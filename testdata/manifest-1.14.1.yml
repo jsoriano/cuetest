@@ -1,4 +1,5 @@
 format_version: "1.14.1"
+type: integration
 name: apache
 version: 1.0.0-rc.1
 license: basic
