@@ -5,9 +5,8 @@ spec_version: string
 #Subscription: "basic" | "gold" | "platinum" | "enterprise"
 #License: "Apache-2.0" | "Elastic-2.0"
 
-#IntegrationManifest: {
+BaseManifest: {
   format_version: #Version
-  type: "integration"
   name: string
   version: #Version
   conditions?: {
@@ -33,18 +32,19 @@ spec_version: string
   }
 }
 
-#InputManifest: {
-  format_version: #Version
-  type: "input"
+IntegrationManifest: BaseManifest
+IntegrationManifest: type: "integration"
+
+InputManifest: BaseManifest
+InputManifest: type: "input"
+
+InputPackage: {
+  "manifest.yml": InputManifest
 }
 
-#InputPackage: {
-  "manifest.yml": #InputManifest
+IntegrationPackage: {
+  "manifest.yml": IntegrationManifest
 }
 
-#IntegrationPackage: {
-  "manifest.yml": #IntegrationManifest
-}
-
-#PackageManifest: #IntegrationManifest | #InputManifest
-#Package: #IntegrationPackage | #InputPackage
+#PackageManifest: IntegrationManifest | InputManifest
+#Package: IntegrationPackage | InputPackage
