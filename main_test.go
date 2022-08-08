@@ -25,6 +25,9 @@ var manifestYml2_0_0 string
 //go:embed testdata/manifest-1.14.1.yml
 var manifestYml1_14_1 string
 
+//go:embed testdata/manifest-input.yml
+var manifestYmlInput string
+
 func TestValidation(t *testing.T) {
 	cases := []struct {
 		title       string
@@ -33,6 +36,7 @@ func TestValidation(t *testing.T) {
 	}{
 		{"1.14.1 valid", manifestYml1_14_1, true},
 		{"2.0.0 valid", manifestYml2_0_0, true},
+		{"input valid", manifestYmlInput, true},
 	}
 
 	cueCtx := cuecontext.New()

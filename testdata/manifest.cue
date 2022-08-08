@@ -37,6 +37,7 @@ IntegrationManifest: type: "integration"
 
 InputManifest: BaseManifest
 InputManifest: type: "input"
+InputManifest: format_version: >="1.13.0"
 
 InputPackage: {
   "manifest.yml": InputManifest
