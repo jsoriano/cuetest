@@ -68,7 +68,6 @@ func TestValidation(t *testing.T) {
 
 			t.Run("with unify", func(t *testing.T) {
 				v := manifestValue.Unify(manifestDef)
-				requireNoCueErr(t, v.Err())
 				requireNoCueErr(t, v.Validate(cue.Concrete(true)))
 			})
 
