@@ -5,6 +5,16 @@ spec_version: string
 #Subscription: "basic" | "gold" | "platinum" | "enterprise"
 #License: "Apache-2.0" | "Elastic-2.0"
 
+Icons: [
+  ...{
+    src: string
+    title?: string
+    size?: string
+    type?: string
+    dark_mode?: bool
+  }
+]
+
 BaseManifest: {
   format_version: #Version
   name: string
@@ -12,6 +22,8 @@ BaseManifest: {
   conditions?: {
     kibana?: version?: #VersionCondition
   }
+
+  icons?: Icons
 
   // Old format for required subscription, removing it in 2.0.
   if spec_version < "2.0.0" {

@@ -9,3 +9,8 @@ conditions:
     subscription: basic
   # TODO: Support also:
   # elastic.subscription: basic
+icons:
+  - src: "img/icon.png"
+    dark_mode: false
+  - src: "img/dark_icon.png"
+    dark_mode: true
